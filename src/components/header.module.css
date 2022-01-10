@@ -10,7 +10,6 @@
   display: grid;
   width: 100%;
   padding: var(--size-gap) var(--size-gutter);
-  grid-template-columns: var(--size-input) 1fr min-content min-content;
   grid-template-areas: "logo nada searchButton cartButton" "navHeader navHeader navHeader navHeader";
   align-items: center;
   background-color: var(--background);
@@ -42,14 +41,16 @@
   grid-area: logo;
   height: 100%;
   width: 100%;
+  padding: 20px;
+	border-radius: 10%;
   align-items: center;
   justify-content: center;
   color: var(--text-color-secondary);
 }
 
 .logo:hover {
-  color: var(--text-color);
-  text-decoration: none;
+  color: #FF5733;
+    transform: scale(1.1);
 }
 
 .logo[aria-current="page"] {
