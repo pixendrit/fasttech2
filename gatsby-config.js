@@ -2,14 +2,14 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    siteTitle: "gatsby-starter-shopify",
-    siteTitleDefault: "gatsby-starter-shopify by @GatsbyJS",
-    siteUrl: "https://shopify-demo.gatsbyjs.com",
-    hrefLang: "en",
+    siteTitle: "FastTech-Ecommerce",
+    siteTitleDefault: "FastTech - Blej teknologji online",
+    siteUrl: "https://fasttechks.gatsbyjs.io/",
+    hrefLang: "sq",
     siteDescription:
-      "A Gatsby starter using the latest Shopify plugin showcasing a store with product overview, individual product pages, and a cart.",
+      "FastTech është dyçan i blerjeve online, me produkte të ndryshme në fushën e teknologjisë. .",
     siteImage: "/default-og-image.jpg",
-    twitter: "@gatsbyjs",
+    twitter: "@fasttechferizaj",
   },
   flags: {
     FAST_DEV: true,
