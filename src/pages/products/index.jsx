@@ -9,11 +9,11 @@ import { title } from "./index.module.css"
 export default function Products({ data: { products } }) {
   return (
     <Layout>
-      <Seo title="All Products" />
+      <Seo title="Të gjitha produktet" />
       <h1 className={title}>Products</h1>
       <ProductListing products={products.nodes} />
       {products.pageInfo.hasNextPage && (
-        <MoreButton to={`/search#more`}>More products</MoreButton>
+        <MoreButton to={`/search#more`}>Më shumë produkte</MoreButton>
       )}
     </Layout>
   )
