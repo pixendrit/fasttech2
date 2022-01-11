@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     siteTitle: "FastTech-Ecommerce",
     siteTitleDefault: "FastTech - Blej teknologji online",
-    siteUrl: "https://fasttechks.gatsbyjs.io/",
+    siteUrl: "https://fasttechks.com/",
     hrefLang: "sq",
     siteDescription:
       "FastTech është dyçan i blerjeve online, me produkte të ndryshme në fushën e teknologjisë. .",
