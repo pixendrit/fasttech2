@@ -22,14 +22,7 @@ export const query = graphql`
 function Hero (props) {
   return (
     <div className={container}>
-      <h1 className={intro}>Mençur, thjeshtë, shpejt 🔥 .</h1>
-      {!!process.env.GATSBY_DEMO_STORE && (
-        <>
-          <p className={callOut}>
-            Mirësevini në dyçanin e Fast Tech. 
-          </p>
-        </>
-      )}
+      <h1 className={intro}>Mençur, thjeshtë & shpejt 🔥</h1>     
     </div>
   )
 }
