@@ -34,26 +34,25 @@ export default function CartPage() {
       <div className={wrap}>
         {emptyCart ? (
           <div className={emptyStateContainer}>
-            <h1 className={emptyStateHeading}>Your cart is empty</h1>
+            <h1 className={emptyStateHeading}>Shporta juaj është e thatë</h1>
             <p>
-              Looks like you haven’t found anything yet. We understand that
-              sometimes it’s hard to choose — maybe this helps:
+              Si duket ende nuk keni gjetur diçka që ju pëlqen. Këtu mund të shihni produktet më të kërkuara:
             </p>
             <Link to="/search?s=BEST_SELLING" className={emptyStateLink}>
-              View trending products
+              Shiko produktet në trend
             </Link>
           </div>
         ) : (
           <>
-            <h1 className={title}>Your cart</h1>
+            <h1 className={title}>Shporta juaj</h1>
             <table className={table}>
               <thead>
                 <tr>
-                  <th className={imageHeader}>Image</th>
-                  <th className={productHeader}>Product</th>
-                  <th className={collapseColumn}>Price</th>
-                  <th>Qty.</th>
-                  <th className={[totals, collapseColumn].join(" ")}>Total</th>
+                  <th className={imageHeader}>Foto</th>
+                  <th className={productHeader}>Produkti</th>
+                  <th className={collapseColumn}>Çmimi</th>
+                  <th>Sasia</th>
+                  <th className={[totals, collapseColumn].join(" ")}>Totali</th>
                 </tr>
               </thead>
               <tbody>
@@ -65,7 +64,7 @@ export default function CartPage() {
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
-                  <td className={labelColumn}>Subtotal</td>
+                  <td className={labelColumn}>Subtotali</td>
                   <td className={totals}>
                     {formatPrice(
                       checkout.subtotalPriceV2.currencyCode,
@@ -77,7 +76,7 @@ export default function CartPage() {
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
-                  <td className={labelColumn}>Taxes</td>
+                  <td className={labelColumn}>TVSH</td>
                   <td className={totals}>
                     {formatPrice(
                       checkout.totalTaxV2.currencyCode,
@@ -89,14 +88,14 @@ export default function CartPage() {
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
-                  <td className={labelColumn}>Shipping</td>
-                  <td className={totals}>Calculated at checkout</td>
+                  <td className={labelColumn}>Transporti</td>
+                  <td className={totals}>Llogaritet në faqen tjetër</td>
                 </tr>
                 <tr className={grandTotal}>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
                   <td className={collapseColumn}></td>
-                  <td className={labelColumn}>Total Price</td>
+                  <td className={labelColumn}>Çmimi total</td>
                   <td className={totals}>
                     {formatPrice(
                       checkout.totalPriceV2.currencyCode,
@@ -111,7 +110,7 @@ export default function CartPage() {
               disabled={loading}
               className={checkoutButton}
             >
-              Checkout
+              Bleje produktin
             </button>
           </>
         )}

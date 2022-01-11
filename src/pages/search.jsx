@@ -152,7 +152,7 @@ function SearchPage({
 
   return (
     <Layout>
-      <h1 className={visuallyHidden}>Search Results</h1>
+      <h1 className={visuallyHidden}>Rezultatet e kërkimit</h1>
       <div className={main}>
         <div className={search} aria-hidden={modalOpen}>
           <SearchBar defaultTerm={filters.term} setFilters={setFilters} />
@@ -170,17 +170,17 @@ function SearchPage({
           </button>
           <div className={sortSelector}>
             <label>
-              <span>Sort by:</span>
+              <span>Ndaj sipas:</span>
               <select
                 value={sortKey}
                 // eslint-disable-next-line
                 onChange={(e) => setSortKey(e.target.value)}
               >
-                <option value="RELEVANCE">Relevance</option>
-                <option value="PRICE">Price</option>
-                <option value="TITLE">Title</option>
-                <option value="CREATED_AT">New items</option>
-                <option value="BEST_SELLING">Trending</option>
+                <option value="RELEVANCE">Ngjashmëria</option>
+                <option value="PRICE">Çmimi</option>
+                <option value="TITLE">Tituli</option>
+                <option value="CREATED_AT">Produkte të reja</option>
+                <option value="BEST_SELLING">Më të shiturat</option>
               </select>
             </label>
             <SortIcon className={sortIcon} />
@@ -211,15 +211,15 @@ function SearchPage({
         >
           {isFetching ? (
             <p className={progressStyle}>
-              <Spinner aria-valuetext="Searching" /> Searching
+              <Spinner aria-valuetext="Searching" /> Duke kërkuar
               {filters.term ? ` for "${filters.term}"…` : `…`}
             </p>
           ) : (
             <p className={resultsStyle}>
-              Search results{" "}
+              Rezultatet e kërkimit{" "}
               {filters.term && (
                 <>
-                  for "<span>{filters.term}</span>"
+                  për "<span>{filters.term}</span>"
                 </>
               )}
             </p>
@@ -247,7 +247,7 @@ function SearchPage({
             </ul>
           )}
           {!isFetching && products.length === 0 && (
-            <div className={emptyState}>No results found</div>
+            <div className={emptyState}>Nuk u gjet asnjë rezultat</div>
           )}
           {hasPreviousPage || hasNextPage ? (
             <Pagination
@@ -284,7 +284,7 @@ function SearchBar({ defaultTerm, setFilters }) {
           setTerm(e.target.value)
           debouncedSetFilters(e.target.value)
         }}
-        placeholder="Search..."
+        placeholder="Kërko..."
       />
       {term ? (
         <button
@@ -294,7 +294,7 @@ function SearchBar({ defaultTerm, setFilters }) {
             setTerm("")
             setFilters((filters) => ({ ...filters, term: "" }))
           }}
-          aria-label="Clear search query"
+          aria-label="Nise nga fillimi"
         >
           <CrossIcon />
         </button>
@@ -312,7 +312,7 @@ function Pagination({ previousPage, hasPreviousPage, nextPage, hasNextPage }) {
         className={paginationButton}
         disabled={!hasPreviousPage}
         onClick={previousPage}
-        aria-label="Previous page"
+        aria-label="Faqja e kaluar"
       >
         <CgChevronLeft />
       </button>
@@ -320,7 +320,7 @@ function Pagination({ previousPage, hasPreviousPage, nextPage, hasNextPage }) {
         className={paginationButton}
         disabled={!hasNextPage}
         onClick={nextPage}
-        aria-label="Next page"
+        aria-label="Faqja tjetër"
       >
         <CgChevronRight />
       </button>

@@ -22,7 +22,7 @@ export function Navigation({ className }) {
         to="/products/"
         activeClassName={activeLink}
       >
-        All products
+        Të gjitha produktet
       </Link>
       {productTypes.map((name) => (
         <Link

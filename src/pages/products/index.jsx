@@ -10,7 +10,7 @@ export default function Products({ data: { products } }) {
   return (
     <Layout>
       <Seo title="Të gjitha produktet" />
-      <h1 className={title}>Products</h1>
+      <h1 className={title}>Produktet</h1>
       <ProductListing products={products.nodes} />
       {products.pageInfo.hasNextPage && (
         <MoreButton to={`/search#more`}>Më shumë produkte</MoreButton>

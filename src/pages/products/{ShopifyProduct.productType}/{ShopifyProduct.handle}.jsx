@@ -142,14 +142,14 @@ export default function Product({ data: { product, suggestions } }) {
               </div>
               {hasMultipleImages && (
                 <div className={scrollForMore} id="instructions">
-                  <span aria-hidden="true">←</span> scroll for more{" "}
+                  <span aria-hidden="true">←</span> scroll për më shumë{" "}
                   <span aria-hidden="true">→</span>
                 </div>
               )}
             </div>
           )}
           {!hasImages && (
-            <span className={noImagePreview}>No Preview image</span>
+            <span className={noImagePreview}>Nuk ka foto</span>
           )}
           <div>
             <div className={breadcrumb}>
@@ -196,11 +196,11 @@ export default function Product({ data: { product, suggestions } }) {
               />
             </div>
             <div className={metaSection}>
-              <span className={labelFont}>Type</span>
+              <span className={labelFont}>Kategoria</span>
               <span className={tagList}>
                 <Link to={product.productTypeSlug}>{product.productType}</Link>
               </span>
-              <span className={labelFont}>Tags</span>
+              <span className={labelFont}>Fjalë kyçe</span>
               <span className={tagList}>
                 {product.tags.map((tag) => (
                   <Link to={`/search?t=${tag}`}>{tag}</Link>

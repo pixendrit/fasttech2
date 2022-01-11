@@ -6,9 +6,9 @@ export default function NotFoundPage() {
   return (
     <Layout>
       <div className={container}>
-        <h1 className={heading}>Page Not Found</h1>
+        <h1 className={heading}>Faqja nuk u gjet</h1>
         <p className={paragraph}>
-          Sorry, we couldn't find what you were looking for
+          Nuk ka faqe me këto specifika.
         </p>
       </div>
     </Layout>

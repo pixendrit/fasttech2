@@ -37,10 +37,10 @@ export function Header() {
       </header>
       <Toast show={loading || didJustAddToCart}>
         {!didJustAddToCart ? (
-          "Updating…"
+          "Duke shtuar…"
         ) : (
           <>
-            Added to cart{" "}
+            Produkti u shtua{" "}
             <svg
               width="14"
               height="14"
