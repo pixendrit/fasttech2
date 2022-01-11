@@ -170,7 +170,7 @@ function SearchPage({
           </button>
           <div className={sortSelector}>
             <label>
-              <span>Sort by:</span>
+              <span>Ndaj sipas:</span>
               <select
                 value={sortKey}
                 // eslint-disable-next-line
