@@ -152,7 +152,7 @@ function SearchPage({
 
   return (
     <Layout>
-      <h1 className={visuallyHidden}>Rezultatet e kërkimit</h1>
+      <h1 className={visuallyHidden}>Search Results</h1>
       <div className={main}>
         <div className={search} aria-hidden={modalOpen}>
           <SearchBar defaultTerm={filters.term} setFilters={setFilters} />
@@ -170,7 +170,7 @@ function SearchPage({
           </button>
           <div className={sortSelector}>
             <label>
-              <span>Ndaj sipas:</span>
+              <span>Sort by:</span>
               <select
                 value={sortKey}
                 // eslint-disable-next-line
@@ -247,7 +247,7 @@ function SearchPage({
             </ul>
           )}
           {!isFetching && products.length === 0 && (
-            <div className={emptyState}>Nuk u gjet asnjë rezultat</div>
+            <div className={emptyState}>Nuk është gjetur asnjë produkt</div>
           )}
           {hasPreviousPage || hasNextPage ? (
             <Pagination
@@ -284,7 +284,7 @@ function SearchBar({ defaultTerm, setFilters }) {
           setTerm(e.target.value)
           debouncedSetFilters(e.target.value)
         }}
-        placeholder="Kërko..."
+        placeholder="Search..."
       />
       {term ? (
         <button
@@ -294,7 +294,7 @@ function SearchBar({ defaultTerm, setFilters }) {
             setTerm("")
             setFilters((filters) => ({ ...filters, term: "" }))
           }}
-          aria-label="Nise nga fillimi"
+          aria-label="Clear search query"
         >
           <CrossIcon />
         </button>
@@ -312,7 +312,7 @@ function Pagination({ previousPage, hasPreviousPage, nextPage, hasNextPage }) {
         className={paginationButton}
         disabled={!hasPreviousPage}
         onClick={previousPage}
-        aria-label="Faqja e kaluar"
+        aria-label="Previous page"
       >
         <CgChevronLeft />
       </button>
@@ -320,7 +320,7 @@ function Pagination({ previousPage, hasPreviousPage, nextPage, hasNextPage }) {
         className={paginationButton}
         disabled={!hasNextPage}
         onClick={nextPage}
-        aria-label="Faqja tjetër"
+        aria-label="Next page"
       >
         <CgChevronRight />
       </button>
