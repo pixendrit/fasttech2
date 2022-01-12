@@ -27,8 +27,8 @@ class MessengerChat extends React.Component {
           attribution="setup_tool"
           page_id="103543838170656"
           theme_color="#2f8dff"
-          logged_in_greeting="Hi there! Have any questions?"
-          logged_out_greeting="Hi there! Have any questions?" />
+          logged_in_greeting="Përshëndetje! Si mund të ju ndihmojmë?"
+           />
       </>
     );
   }
