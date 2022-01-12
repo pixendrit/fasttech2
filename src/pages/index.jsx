@@ -10,6 +10,7 @@ import {
   deployButton,
 } from "./index.module.css"
 
+
 export const query = graphql`
   query {
     shopifyCollection(handle: { eq: "frontpage" }) {

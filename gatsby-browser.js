@@ -9,7 +9,6 @@ export const wrapRootElement = ({ element }) => (
   <StoreProvider>{element}</StoreProvider>
   
 )
-
 export const wrapPageElement = ({ element }) => (
   <>
     {element}
