@@ -35,7 +35,7 @@ export function ProductCard({ product, eager }) {
     try {
       storefrontImageData = getShopifyImage({
         image: storefrontImage,
-        layout: "fixed",
+        layout: "fluid",
         width: defaultImageWidth,
         height: defaultImageHeight,
       })
@@ -86,7 +86,7 @@ export const query = graphql`
     images {
       id
       altText
-      gatsbyImageData(aspectRatio: 1, width: 640)
+      gatsbyImageData(aspectRatio: 1, width: 356)
     }
     priceRangeV2 {
       minVariantPrice {

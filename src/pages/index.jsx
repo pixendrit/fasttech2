@@ -5,9 +5,6 @@ import { ProductListing } from "../components/product-listing"
 import {
   container,
   intro,
-  callOut,
-  callToAction,
-  deployButton,
 } from "./index.module.css"
 
 
